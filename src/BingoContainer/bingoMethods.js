@@ -1,5 +1,18 @@
-import strings from "./strings.json"
+import stringsJson from "./strings.json"
+
+const shuffleWords = (words) => {
+  const shuffledWords = words.sort(() => Math.random() - Math.random());
+  const centerIndex = Math.floor(shuffledWords.length / 2);
+  const freeSquarIndex = words.findIndex((word) => word === "FREE");
+  const swap = shuffledWords[centerIndex];
+  shuffledWords[centerIndex] = shuffledWords[freeSquarIndex];
+  shuffledWords[freeSquarIndex] = swap;
+
+  return shuffledWords;
+}
+
 export const mapStrings = () => {
+  const strings = shuffleWords(stringsJson)
   const itemsLengthInRow = Math.sqrt(strings.length)
   if ((itemsLengthInRow % 2) !== 1) {
     alert("strings can't form a square with a center piece")

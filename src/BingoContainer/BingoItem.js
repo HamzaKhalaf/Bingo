@@ -28,6 +28,7 @@ const ColLine = styled(Box)(() => ({
   height: "110%",
   transform: "translate(-50%, -50%)",
   backgroundColor: "#000",
+  pointerEvents: "none",
 }));
 
 const RowLine = styled(Box)(() => ({
@@ -39,6 +40,7 @@ const RowLine = styled(Box)(() => ({
   width: "110%",
   transform: "translate(-50%, -50%)",
   backgroundColor: "#000",
+  pointerEvents: "none",
 }));
 
 const DiagTopLeftLine = styled(Box)(() => ({
@@ -50,6 +52,7 @@ const DiagTopLeftLine = styled(Box)(() => ({
   width: "150%",
   transform: "translate(-50%, -50%) rotate(45deg)",
   backgroundColor: "#000",
+  pointerEvents: "none",
 }));
 
 const DiagBotLeftLine = styled(Box)(() => ({
@@ -61,6 +64,7 @@ const DiagBotLeftLine = styled(Box)(() => ({
   width: "150%",
   transform: "translate(-50%, -50%) rotate(-45deg)",
   backgroundColor: "#000",
+  pointerEvents: "none",
 }));
 
 const BingoItem = (props) => {
